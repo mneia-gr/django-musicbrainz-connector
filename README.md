@@ -1,8 +1,8 @@
 # Django MusicBrainz Connector #
 
-[![Django CI](https://github.com/marios-zindilis/django-musicbrainz-connector/actions/workflows/django.yml/badge.svg)](https://github.com/marios-zindilis/django-musicbrainz-connector/actions/workflows/django.yml)
+[![Django CI](https://github.com/mneia-gr/django-musicbrainz-connector/actions/workflows/django.yml/badge.svg)](https://github.com/mneia-gr/django-musicbrainz-connector/actions/workflows/django.yml)
 [![Docs](https://readthedocs.org/projects/django-musicbrainz-connector/badge/?version=latest)](https://django-musicbrainz-connector.readthedocs.org/en/latest/?badge=latest)
-[![codecov](https://codecov.io/gh/marios-zindilis/django-musicbrainz-connector/graph/badge.svg?token=GUPRL0NELL)](https://codecov.io/gh/marios-zindilis/django-musicbrainz-connector)
+[![codecov](https://codecov.io/gh/mneia-gr/django-musicbrainz-connector/graph/badge.svg?token=GUPRL0NELL)](https://codecov.io/gh/mneia-gr/django-musicbrainz-connector)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-musicbrainz-connector)](https://pypi.python.org/pypi/django-musicbrainz-connector)
 [![Supported Django versions](https://img.shields.io/pypi/djversions/django-musicbrainz-connector.svg)](https://pypi.python.org/pypi/django-musicbrainz-connector)
 
@@ -22,7 +22,7 @@ The **Django MusicBrainz Connector** is a Django app that connects to a replica 
     Alternatively, install from code:
 
     ```
-    git clone git@github.com:marios-zindilis/django-musicbrainz-connector.git
+    git clone git@github.com:mneia-gr/django-musicbrainz-connector.git
     cd django-musicbrainz-connector
     python setup.py sdist
     python -m pip install dist/django-musicbrainz-connector-0.0.1.tar.gz
