@@ -165,3 +165,24 @@ To build the documentation locally:
 python -m pip install --requirement docs/requirements.txt
 sphinx-build -M html docs build/docs
 ```
+
+### Release ###
+
+1.  Build:
+
+    ```
+    python setup.py sdist
+    python setup.py bdist_wheel
+    ```
+
+2.  Upload to TestPyPI:
+
+    ```
+    python -m twine upload --repository testpypi dist/*
+    ```
+
+3.  If the output looks OK, upload to PyPI:
+
+    ```
+    python -m twine upload dist/*
+    ```
