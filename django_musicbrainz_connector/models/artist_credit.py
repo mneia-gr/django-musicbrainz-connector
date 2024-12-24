@@ -1,13 +1,23 @@
 """
-CREATE TABLE artist_credit ( -- replicate
-    id                  SERIAL,
-    name                VARCHAR NOT NULL,
-    artist_count        SMALLINT NOT NULL,
-    ref_count           INTEGER DEFAULT 0,
-    created             TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    edits_pending       INTEGER NOT NULL DEFAULT 0 CHECK (edits_pending >= 0),
-    gid                 UUID NOT NULL
-);
+.. module:: artist_credit
+
+PostgreSQL Definition
+---------------------
+
+The :code:`artist_credit` table is defined in the MusicBrainz server as:
+
+.. code-block:: sql
+
+    CREATE TABLE artist_credit ( -- replicate
+        id                  SERIAL,
+        name                VARCHAR NOT NULL,
+        artist_count        SMALLINT NOT NULL,
+        ref_count           INTEGER DEFAULT 0,
+        created             TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+        edits_pending       INTEGER NOT NULL DEFAULT 0 CHECK (edits_pending >= 0),
+        gid                 UUID NOT NULL
+    );
+
 """
 
 from django.db import models

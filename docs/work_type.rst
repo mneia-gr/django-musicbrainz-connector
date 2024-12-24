@@ -7,7 +7,7 @@ Work Type
 Model Documentation
 -------------------
 
-.. autoclass:: django_musicbrainz_connector.models.work_type
+.. autoclass:: django_musicbrainz_connector.models.work_type::WorkType
 
 Model Source
 ------------

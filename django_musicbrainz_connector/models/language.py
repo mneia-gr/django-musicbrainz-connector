@@ -1,13 +1,23 @@
 """
-CREATE TABLE language ( -- replicate
-    id                  SERIAL,
-    iso_code_2t         CHAR(3), -- ISO 639-2 (T)
-    iso_code_2b         CHAR(3), -- ISO 639-2 (B)
-    iso_code_1          CHAR(2), -- ISO 639
-    name                VARCHAR(100) NOT NULL,
-    frequency           SMALLINT NOT NULL DEFAULT 0,
-    iso_code_3          CHAR(3)  -- ISO 639-3
-);
+.. module:: Language
+
+PostgreSQL Definition
+---------------------
+
+The :code:`language` table is defined in the MusicBrainz Server as:
+
+.. code-block:: sql
+
+    CREATE TABLE language ( -- replicate
+        id                  SERIAL,
+        iso_code_2t         CHAR(3), -- ISO 639-2 (T)
+        iso_code_2b         CHAR(3), -- ISO 639-2 (B)
+        iso_code_1          CHAR(2), -- ISO 639
+        name                VARCHAR(100) NOT NULL,
+        frequency           SMALLINT NOT NULL DEFAULT 0,
+        iso_code_3          CHAR(3)  -- ISO 639-3
+    );
+
 """
 
 from django.db import models

@@ -16,6 +16,18 @@ Models
 .. toctree::
    :maxdepth: 1
 
+   artist_credit
+   language
+   link
+   link_type
+   medium_format
+   recording
+   recording_work_link
+   release_group_primary_type
+   release_packaging
+   release_status
+   script
+   track
    work
    work_type
 

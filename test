@@ -2,9 +2,17 @@
 
 # Script to run linters and tests on the django-musicbrainz-connector app.
 
+models=$(ls -1 django_musicbrainz_connector/models/*.py | grep -v __init__)
+
 # print "PASSED" in green colour:
 PASSED() {
     printf '\033[0;32mPASSED\033[0m\n';
+}
+
+# print "FAILED" in red colour and exit:
+FAILED() {
+    printf '\033[0;91mFAILED\033[0m\n';
+    exit 1;
 }
 
 # no need to print "PASSED" for `./manage.py check`, it already prints its own useful output
@@ -21,6 +29,13 @@ isort --quiet --check-only --diff .                         && PASSED   || exit 
 
 echo -n 'bandit '
 bandit --quiet --recursive . --configfile pyproject.toml    && PASSED   || exit 1
+
+for model in $models
+do
+    model_name=$(echo $model | cut -d '/' -f 3 | cut -d '.' -f 1)
+    echo -n "Documentation exists for model $model_name? "
+    grep --quiet "   $model_name" docs/index.rst                    && PASSED   || FAILED
+done
 
 coverage run -m pytest -vv --no-migrations
 coverage report
