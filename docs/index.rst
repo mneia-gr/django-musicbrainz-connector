@@ -1,10 +1,10 @@
-.. Django MusicBrainz Connector documentation root file, created by
-   sphinx-quickstart on Sat Nov 11 13:51:46 2023.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Django MusicBrainz Connector
 ============================
+
+The **Django MusicBrainz Connector** is a Django app that connects to a replica of the MusicBrainz PostgreSQL database.
+For more information, see the `GitHub Repository`_.
+
+.. _GitHub Repository: https://github.com/mneia-gr/django-musicbrainz-connector
 
 .. toctree::
    :maxdepth: 2

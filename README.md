@@ -140,3 +140,28 @@ ways:
     `has_delete_permission` are always set to `False`.
 
 4.  All classes that inherit from Django REST Framework's `ViewSet` have `http_method_names` set to `["get"]` only.
+
+## Development ##
+
+### Testing ###
+
+Install test dependencies with:
+
+```
+python -m pip install --requirement requirements-test.txt
+```
+
+Then, run tests with:
+
+```
+./test
+```
+
+### Documentation ###
+
+To build the documentation locally:
+
+```
+python -m pip install --requirement docs/requirements.txt
+sphinx-build -M html docs build/docs
+```
