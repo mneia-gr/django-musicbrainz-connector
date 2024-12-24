@@ -7,7 +7,7 @@ from django_musicbrainz_connector.models.recording_work_link import RecordingWor
 class Work(models.Model):
     """
     Model of a Work. In addition to the attributes that come from the MusicBrainz server, this model has a
-    `musicbrainz_link` property that returns a link to open the work on the MusicBrainz website.
+    `musicbrainz_url` property that returns a link to open the work on the MusicBrainz website.
 
     PostgreSQL Definition
     ---------------------
@@ -39,8 +39,8 @@ class Work(models.Model):
         return self.name
 
     @property
-    def musicbrainz_link(self) -> str:
-        """Returns a link to open the work on the MusicBrainz website."""
+    def musicbrainz_url(self) -> str:
+        """Returns a URL to open the work on the MusicBrainz website."""
         return f"https://musicbrainz.org/work/{self.gid}"
 
     @property

@@ -39,12 +39,13 @@ class Recording(models.Model):
         return self.name
 
     @property
-    def musicbrainz_link(self) -> str:
+    def musicbrainz_url(self) -> str:
+        """Returns a URL to open the recording on the MusicBrainz website."""
         return f"https://musicbrainz.org/recording/{self.gid}"
 
     @property
     def recording_of(self):
-        """Return the works that this Recording is a recording of."""
+        """Return the works that this recording is a recording of."""
         performance = LinkType.objects.get(name="performance", entity_type0="recording", entity_type1="work")
         recording_work_links = RecordingWorkLink.objects.filter(recording=self, link__link_type=performance)
         return [link.work for link in recording_work_links]

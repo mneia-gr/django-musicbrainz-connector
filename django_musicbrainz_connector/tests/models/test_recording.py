@@ -10,9 +10,9 @@ def test_recording_str():
 
 
 @pytest.mark.django_db
-def test_recording_musicbrainz_link():
+def test_recording_musicbrainz_url():
     recording = Recording.objects.get(id=13679939)
-    assert recording.musicbrainz_link == "https://musicbrainz.org/recording/fdb9d6f4-73f2-41f2-ba57-a8dbb65433a2"
+    assert recording.musicbrainz_url == "https://musicbrainz.org/recording/fdb9d6f4-73f2-41f2-ba57-a8dbb65433a2"
 
 
 @pytest.mark.django_db
