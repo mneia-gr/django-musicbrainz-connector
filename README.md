@@ -170,10 +170,11 @@ sphinx-build -M html docs build/docs
 
 1.  Bump the value of `version` in `setup.py`.
 
-2.  Create a git tag, same as the `version`, for example:
+2.  Create a git tag same as the `version`, and push it, for example:
 
     ```
     git tag --annotate v0.0.2 --message "Release tag v0.0.2"
+    git push origin v0.0.2
     ```
 
 3.  Build:
@@ -194,3 +195,5 @@ sphinx-build -M html docs build/docs
     ```
     python -m twine upload dist/*
     ```
+
+6.  Create a new Release on GitHub, from the tag pushed earlier.
