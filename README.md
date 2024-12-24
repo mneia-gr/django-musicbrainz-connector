@@ -168,20 +168,28 @@ sphinx-build -M html docs build/docs
 
 ### Release ###
 
-1.  Build:
+1.  Bump the value of `version` in `setup.py`.
+
+2.  Create a git tag, same as the `version`, for example:
+
+    ```
+    git tag --annotate v0.0.2 --message "Release tag v0.0.2"
+    ```
+
+3.  Build:
 
     ```
     python setup.py sdist
     python setup.py bdist_wheel
     ```
 
-2.  Upload to TestPyPI:
+4.  Upload to TestPyPI:
 
     ```
     python -m twine upload --repository testpypi dist/*
     ```
 
-3.  If the output looks OK, upload to PyPI:
+5.  If the output looks OK, upload to PyPI:
 
     ```
     python -m twine upload dist/*
