@@ -168,7 +168,7 @@ sphinx-build -M html docs build/docs
 
 ### Release ###
 
-1.  Bump the value of `version` in `setup.py`.
+1.  Bump the value of `version` in `setup.py`, and push to GitHub.
 
 2.  Create a git tag same as the `version`, and push it, for example:
 
