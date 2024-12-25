@@ -1,7 +1,12 @@
 from django.urls import include, path
 from rest_framework import routers
 
+from django_musicbrainz_connector.api.area import AreaViewSet
+from django_musicbrainz_connector.api.area_type import AreaTypeViewSet
+from django_musicbrainz_connector.api.artist import ArtistViewSet
 from django_musicbrainz_connector.api.artist_credit import ArtistCreditViewSet
+from django_musicbrainz_connector.api.artist_type import ArtistTypeViewSet
+from django_musicbrainz_connector.api.gender import GenderViewSet
 from django_musicbrainz_connector.api.language import LanguageViewSet
 from django_musicbrainz_connector.api.link import LinkViewSet
 from django_musicbrainz_connector.api.link_type import LinkTypeViewSet
@@ -20,7 +25,12 @@ from django_musicbrainz_connector.api.work import WorkViewSet
 from django_musicbrainz_connector.api.work_type import WorkTypeViewSet
 
 router = routers.DefaultRouter()
+router.register(r"area-types", AreaTypeViewSet)
+router.register(r"areas", AreaViewSet)
 router.register(r"artist-credits", ArtistCreditViewSet)
+router.register(r"artist-types", ArtistTypeViewSet)
+router.register(r"artists", ArtistViewSet)
+router.register(r"genders", GenderViewSet)
 router.register(r"languages", LanguageViewSet)
 router.register(r"links", LinkViewSet)
 router.register(r"link-types", LinkTypeViewSet)

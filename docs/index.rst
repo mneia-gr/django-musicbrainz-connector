@@ -16,7 +16,12 @@ Models
 .. toctree::
    :maxdepth: 1
 
+   area_type
+   area
    artist_credit
+   artist_type
+   artist
+   gender
    language
    link
    link_type

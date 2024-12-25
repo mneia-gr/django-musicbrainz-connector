@@ -1,0 +1,35 @@
+[
+    {
+        "model": "django_musicbrainz_connector.areatype",
+        "pk": 1,
+        "fields": {
+            "name": "Country",
+            "parent": null,
+            "child_order": 1,
+            "description": "Country is used for areas included (or previously included) in ISO 3166-1, e.g. United States.",
+            "gid": "06dd0ae4-8c74-30bb-b43d-95dcedf961de"
+        }
+    },
+    {
+        "model": "django_musicbrainz_connector.areatype",
+        "pk": 3,
+        "fields": {
+            "name": "City",
+            "parent": null,
+            "child_order": 3,
+            "description": "City is used for settlements of any size, including towns and villages.",
+            "gid": "6fd8f29a-3d0a-32fc-980d-ea697b69da78"
+        }
+    },
+    {
+        "model": "django_musicbrainz_connector.areatype",
+        "pk": 6,
+        "fields": {
+            "name": "Island",
+            "parent": null,
+            "child_order": 6,
+            "description": "Island is used for islands and atolls which don't form subdivisions of their own, e.g. Skye. These are not considered when displaying the parent areas for a given area.",
+            "gid": "3f8e7b66-058b-369b-9834-ffa5fcba5641"
+        }
+    }
+]

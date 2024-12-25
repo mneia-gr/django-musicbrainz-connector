@@ -1,0 +1,13 @@
+[
+    {
+        "model": "django_musicbrainz_connector.gender",
+        "pk": 1,
+        "fields": {
+            "name": "Male",
+            "parent": null,
+            "child_order": 1,
+            "description": null,
+            "gid": "36d3d30a-839d-3eda-8cb3-29be4384e4a9"
+        }
+    }
+]

@@ -38,6 +38,11 @@ def django_db_setup(django_db_setup, django_db_blocker):
         "medium-format",
         "medium",
         "track",
+        "area-type",
+        "area",
+        "artist-type",
+        "gender",
+        "artist",
     ]
     with django_db_blocker.unblock():
         for fixture in fixtures:

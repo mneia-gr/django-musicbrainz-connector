@@ -1,0 +1,26 @@
+[
+    {
+        "model": "django_musicbrainz_connector.artist",
+        "pk": 205528,
+        "fields": {
+            "gid": "482a86e0-4d49-4d26-8406-3d06f01f0285",
+            "name": "Μάρκος Βαμβακάρης",
+            "sort_name": "Vamvakaris, Markos",
+            "begin_date_year": 1905,
+            "begin_date_month": 5,
+            "begin_date_day": 10,
+            "end_date_year": 1972,
+            "end_date_month": 2,
+            "end_date_day": 8,
+            "type": 1,
+            "area": 84,
+            "gender": 1,
+            "comment": "",
+            "edits_pending": 0,
+            "last_updated": "2017-10-20 09:21:16.739978+00",
+            "ended": true,
+            "begin_area": 116512,
+            "end_area": 12762
+        }
+    }
+]

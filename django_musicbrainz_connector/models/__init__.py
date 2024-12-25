@@ -1,4 +1,9 @@
+from django_musicbrainz_connector.models.area import Area
+from django_musicbrainz_connector.models.area_type import AreaType
+from django_musicbrainz_connector.models.artist import Artist
 from django_musicbrainz_connector.models.artist_credit import ArtistCredit
+from django_musicbrainz_connector.models.artist_type import ArtistType
+from django_musicbrainz_connector.models.gender import Gender
 from django_musicbrainz_connector.models.language import Language
 from django_musicbrainz_connector.models.link import Link
 from django_musicbrainz_connector.models.link_type import LinkType
@@ -17,7 +22,12 @@ from django_musicbrainz_connector.models.work import Work
 from django_musicbrainz_connector.models.work_type import WorkType
 
 __all__ = [
+    "Area",
+    "AreaType",
     "ArtistCredit",
+    "ArtistType",
+    "Artist",
+    "Gender",
     "Language",
     "Link",
     "LinkType",

@@ -1,0 +1,59 @@
+[
+    {
+        "model": "django_musicbrainz_connector.area",
+        "pk": 84,
+        "fields": {
+            "gid": "803db0ca-b6ed-3bbc-aeb8-f89efd0a2168",
+            "name": "Greece",
+            "type": 1,
+            "edits_pending": 0,
+            "last_updated": "2013-05-27 13:12:47.859578+00",
+            "begin_date_day": null,
+            "begin_date_month": null,
+            "begin_date_year": null,
+            "end_date_day": null,
+            "end_date_month": null,
+            "end_date_year": null,
+            "ended": false,
+            "comment": ""
+        }
+    },
+    {
+        "model": "django_musicbrainz_connector.area",
+        "pk": 116512,
+        "fields": {
+            "gid": "2efc4501-de18-41ca-ba1e-bd2017ecf485",
+            "name": "Syros",
+            "type": 6,
+            "edits_pending": 0,
+            "last_updated": "2016-07-15 23:24:24.78521+00",
+            "begin_date_day": null,
+            "begin_date_month": null,
+            "begin_date_year": null,
+            "end_date_day": null,
+            "end_date_month": null,
+            "end_date_year": null,
+            "ended": false,
+            "comment": ""
+        }
+    },
+    {
+        "model": "django_musicbrainz_connector.area",
+        "pk": 12762,
+        "fields": {
+            "gid": "1876749b-4a07-495b-8b57-9dde0ac39c24",
+            "name": "Athens",
+            "type": 3,
+            "edits_pending": 0,
+            "last_updated": "2013-11-26 04:35:08.596767+00",
+            "begin_date_day": null,
+            "begin_date_month": null,
+            "begin_date_year": null,
+            "end_date_day": null,
+            "end_date_month": null,
+            "end_date_year": null,
+            "ended": false,
+            "comment": ""
+        }
+    }
+]

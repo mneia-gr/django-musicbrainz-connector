@@ -1,0 +1,13 @@
+[
+    {
+        "model": "django_musicbrainz_connector.artisttype",
+        "pk": 1,
+        "fields": {
+            "name": "Person",
+            "parent": null,
+            "child_order": 1,
+            "description": "This indicates an individual person, be it under its legal name (\"John Lennon\"), or a performance name (\"Sting\").",
+            "gid": "b6e035f4-3ce9-331c-97df-83397230b0df"
+        }
+    }
+]
