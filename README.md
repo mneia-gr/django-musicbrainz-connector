@@ -19,7 +19,7 @@ The **Django MusicBrainz Connector** is a Django app that connects to a replica 
     python3 -m pip install django-musicbrainz-connector
     ```
 
-    Alternatively, install from code:
+    Alternatively, install from code. For example:
 
     ```
     git clone git@github.com:mneia-gr/django-musicbrainz-connector.git
@@ -54,7 +54,7 @@ The **Django MusicBrainz Connector** is a Django app that connects to a replica 
     ALTER USER django_musicbrainz_connector SET SEARCH_PATH TO musicbrainz;
     ```
 
-    You can confirm this with something like:
+    You can confirm this configuration with something like:
 
     ```sql
     SELECT grantee, privilege_type FROM information_schema.role_table_grants WHERE table_name='area_type';
@@ -78,7 +78,7 @@ The **Django MusicBrainz Connector** is a Django app that connects to a replica 
     You can also connect to the database with `psql`:
 
     ```
-    psql -d musicbrainz_db -U django_musicbrainz_connector
+    psql --dbname musicbrainz_db --username django_musicbrainz_connector
     SELECT * FROM musicbrainz.area_type;
     ```
 
