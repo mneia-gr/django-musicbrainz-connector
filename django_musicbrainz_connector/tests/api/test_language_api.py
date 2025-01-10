@@ -26,7 +26,7 @@ def test_language_serializer():
 @pytest.mark.django_db
 def test_language_api_GET():
     api_client = APIClient()
-    response = api_client.get("/api/languages/")
+    response = api_client.get("/languages/")
     assert response.status_code == 200
     assert response.data["count"] == 1
     assert response.data["next"] is None
@@ -37,7 +37,7 @@ def test_language_api_GET():
 @pytest.mark.django_db
 def test_language_api_GET_by_id():
     api_client = APIClient()
-    response = api_client.get("/api/languages/159/")
+    response = api_client.get("/languages/159/")
     assert response.status_code == 200
     assert response.data == EXPECTED_API_RESPONSE
 
@@ -45,7 +45,7 @@ def test_language_api_GET_by_id():
 @pytest.mark.django_db
 def test_language_api_GET_by_name():
     api_client = APIClient()
-    response = api_client.get("/api/languages/Greek/")
+    response = api_client.get("/languages/Greek/")
     assert response.status_code == 200
     assert response.data == EXPECTED_API_RESPONSE
 
@@ -53,6 +53,6 @@ def test_language_api_GET_by_name():
 @pytest.mark.django_db
 def test_language_api_GET_not_found():
     api_client = APIClient()
-    response = api_client.get("/api/languages/1/")
+    response = api_client.get("/languages/1/")
     assert response.status_code == 404
     assert response.data == {"detail": "Not found."}

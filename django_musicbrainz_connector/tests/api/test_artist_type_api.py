@@ -17,7 +17,7 @@ API_RESPONSE = {
 @pytest.mark.django_db
 def test_artist_type_api_GET_by_id():
     api_client = APIClient()
-    response = api_client.get("/api/artist-types/1/")
+    response = api_client.get("/artist-types/1/")
     assert response.status_code == 200
     assert response.data == API_RESPONSE
 
@@ -25,7 +25,7 @@ def test_artist_type_api_GET_by_id():
 @pytest.mark.django_db
 def test_artist_type_api_GET_by_gid():
     api_client = APIClient()
-    response = api_client.get("/api/artist-types/b6e035f4-3ce9-331c-97df-83397230b0df/")
+    response = api_client.get("/artist-types/b6e035f4-3ce9-331c-97df-83397230b0df/")
     assert response.status_code == 200
     assert response.data == API_RESPONSE
 
@@ -33,7 +33,7 @@ def test_artist_type_api_GET_by_gid():
 @pytest.mark.django_db
 def test_artist_type_api_GET_by_name():
     api_client = APIClient()
-    response = api_client.get("/api/artist-types/Person/")
+    response = api_client.get("/artist-types/Person/")
     assert response.status_code == 200
     assert response.data == API_RESPONSE
 
@@ -41,6 +41,6 @@ def test_artist_type_api_GET_by_name():
 @pytest.mark.django_db
 def test_artist_type_api_GET_not_found():
     api_client = APIClient()
-    response = api_client.get("/api/artist-types/123/")
+    response = api_client.get("/artist-types/123/")
     assert response.status_code == 404
     assert response.data == {"detail": "Not found."}

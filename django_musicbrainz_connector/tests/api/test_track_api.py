@@ -31,7 +31,7 @@ EXPECTED_TRACK_API_RESPONSE = {
 @pytest.mark.django_db
 def test_track_api_GET():
     api_client = APIClient()
-    response = api_client.get("/api/tracks/")
+    response = api_client.get("/tracks/")
     assert response.status_code == 200
     assert response.data["next"] is None
     assert response.data["previous"] is None
@@ -41,7 +41,7 @@ def test_track_api_GET():
 @pytest.mark.django_db
 def test_track_api_GET_by_medium():
     api_client = APIClient()
-    response = api_client.get("/api/tracks/?medium-id=2912288")
+    response = api_client.get("/tracks/?medium-id=2912288")
     assert response.status_code == 200
     assert response.data["next"] is None
     assert response.data["previous"] is None

@@ -75,7 +75,7 @@ RELEASE_RESPONSE = {
 @pytest.mark.django_db
 def test_release_api_GET():
     api_client = APIClient()
-    response = api_client.get("/api/releases/")
+    response = api_client.get("/releases/")
     assert response.status_code == 200
     assert response.data["count"] == 1
     assert response.data["next"] is None
@@ -86,7 +86,7 @@ def test_release_api_GET():
 @pytest.mark.django_db
 def test_release_api_GET_by_id():
     api_client = APIClient()
-    response = api_client.get("/api/releases/2681644/")
+    response = api_client.get("/releases/2681644/")
     assert response.status_code == 200
     assert response.data == RELEASE_RESPONSE
 
@@ -94,7 +94,7 @@ def test_release_api_GET_by_id():
 @pytest.mark.django_db
 def test_release_api_GET_by_gid():
     api_client = APIClient()
-    response = api_client.get("/api/releases/a026f47e-5ce7-4b6f-8469-cdf8c4bccb4b/")
+    response = api_client.get("/releases/a026f47e-5ce7-4b6f-8469-cdf8c4bccb4b/")
     assert response.status_code == 200
     assert response.data == RELEASE_RESPONSE
 
@@ -102,6 +102,6 @@ def test_release_api_GET_by_gid():
 @pytest.mark.django_db
 def test_release_api_GET_not_found():
     api_client = APIClient()
-    response = api_client.get("/api/releases/1/")
+    response = api_client.get("/releases/1/")
     assert response.status_code == 404
     assert response.data == {"detail": "Not found."}

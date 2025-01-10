@@ -25,7 +25,7 @@ def test_work_type_serializer():
 @pytest.mark.django_db
 def test_work_type_api_GET():
     api_client = APIClient()
-    response = api_client.get("/api/work-types/")
+    response = api_client.get("/work-types/")
     assert response.status_code == 200
     assert response.data["count"] == 1
     assert response.data["next"] is None
@@ -36,7 +36,7 @@ def test_work_type_api_GET():
 @pytest.mark.django_db
 def test_work_type_api_GET_by_id():
     api_client = APIClient()
-    response = api_client.get("/api/work-types/17/")
+    response = api_client.get("/work-types/17/")
     assert response.status_code == 200
     assert response.data == WORK_TYPE_API_RESPONSE
 
@@ -44,7 +44,7 @@ def test_work_type_api_GET_by_id():
 @pytest.mark.django_db
 def test_work_type_api_GET_by_gid():
     api_client = APIClient()
-    response = api_client.get("/api/work-types/f061270a-2fd6-32f1-a641-f0f8676d14e6/")
+    response = api_client.get("/work-types/f061270a-2fd6-32f1-a641-f0f8676d14e6/")
     assert response.status_code == 200
     assert response.data == WORK_TYPE_API_RESPONSE
 
@@ -52,7 +52,7 @@ def test_work_type_api_GET_by_gid():
 @pytest.mark.django_db
 def test_work_type_api_GET_by_name():
     api_client = APIClient()
-    response = api_client.get("/api/work-types/Song/")
+    response = api_client.get("/work-types/Song/")
     assert response.status_code == 200
     assert response.data == WORK_TYPE_API_RESPONSE
 
@@ -60,6 +60,6 @@ def test_work_type_api_GET_by_name():
 @pytest.mark.django_db
 def test_work_type_api_GET_not_found():
     api_client = APIClient()
-    response = api_client.get("/api/work-types/1/")
+    response = api_client.get("/work-types/1/")
     assert response.status_code == 404
     assert response.data == {"detail": "Not found."}

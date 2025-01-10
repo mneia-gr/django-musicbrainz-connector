@@ -56,7 +56,7 @@ class Artist(models.Model):
     begin_date_day = models.SmallIntegerField("Begin Date Day", null=True, db_column="begin_date_day")
     end_date_year = models.SmallIntegerField("End Date Year", null=True, db_column="end_date_year")
     end_date_month = models.SmallIntegerField("End Date Month", null=True, db_column="end_date_month")
-    end_date_day = models.SmallIntegerField("End Date Day", null=True, , db_column="end_date_day")
+    end_date_day = models.SmallIntegerField("End Date Day", null=True, db_column="end_date_day")
     type = models.ForeignKey("ArtistType", db_column="type", on_delete=models.PROTECT)
     area = models.ForeignKey("Area", db_column="area", on_delete=models.PROTECT)
     gender = models.ForeignKey("Gender", db_column="gender", on_delete=models.PROTECT)

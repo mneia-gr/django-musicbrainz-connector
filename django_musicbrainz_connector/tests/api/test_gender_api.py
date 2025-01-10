@@ -14,7 +14,7 @@ API_RESPONSE = {
 @pytest.mark.django_db
 def test_gender_api_GET_by_id():
     api_client = APIClient()
-    response = api_client.get("/api/genders/1/")
+    response = api_client.get("/genders/1/")
     assert response.status_code == 200
     assert response.data == API_RESPONSE
 
@@ -22,7 +22,7 @@ def test_gender_api_GET_by_id():
 @pytest.mark.django_db
 def test_gender_api_GET_by_gid():
     api_client = APIClient()
-    response = api_client.get("/api/genders/36d3d30a-839d-3eda-8cb3-29be4384e4a9/")
+    response = api_client.get("/genders/36d3d30a-839d-3eda-8cb3-29be4384e4a9/")
     assert response.status_code == 200
     assert response.data == API_RESPONSE
 
@@ -30,7 +30,7 @@ def test_gender_api_GET_by_gid():
 @pytest.mark.django_db
 def test_gender_api_GET_by_name():
     api_client = APIClient()
-    response = api_client.get("/api/genders/Male/")
+    response = api_client.get("/genders/Male/")
     assert response.status_code == 200
     assert response.data == API_RESPONSE
 
@@ -38,6 +38,6 @@ def test_gender_api_GET_by_name():
 @pytest.mark.django_db
 def test_gender_api_GET_not_found():
     api_client = APIClient()
-    response = api_client.get("/api/genders/123/")
+    response = api_client.get("/genders/123/")
     assert response.status_code == 404
     assert response.data == {"detail": "Not found."}

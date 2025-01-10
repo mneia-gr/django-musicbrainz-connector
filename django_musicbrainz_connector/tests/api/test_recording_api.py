@@ -44,7 +44,7 @@ def test_recording_serializer():
 @pytest.mark.django_db
 def test_recording_api_GET():
     api_client = APIClient()
-    response = api_client.get("/api/recordings/")
+    response = api_client.get("/recordings/")
     assert response.status_code == 200
     assert response.data["count"] == 2
     assert response.data["next"] is None
@@ -55,7 +55,7 @@ def test_recording_api_GET():
 @pytest.mark.django_db
 def test_recording_api_GET_by_id():
     api_client = APIClient()
-    response = api_client.get("/api/recordings/13679939/")
+    response = api_client.get("/recordings/13679939/")
     assert response.status_code == 200
     assert response.data == RECORDING_13679939_API_RESPONSE
 
@@ -63,7 +63,7 @@ def test_recording_api_GET_by_id():
 @pytest.mark.django_db
 def test_recording_api_GET_by_gid():
     api_client = APIClient()
-    response = api_client.get("/api/recordings/fdb9d6f4-73f2-41f2-ba57-a8dbb65433a2/")
+    response = api_client.get("/recordings/fdb9d6f4-73f2-41f2-ba57-a8dbb65433a2/")
     assert response.status_code == 200
     assert response.data == RECORDING_13679939_API_RESPONSE
 
@@ -71,6 +71,6 @@ def test_recording_api_GET_by_gid():
 @pytest.mark.django_db
 def test_recording_api_GET_not_found():
     api_client = APIClient()
-    response = api_client.get("/api/recordings/1/")
+    response = api_client.get("/recordings/1/")
     assert response.status_code == 404
     assert response.data == {"detail": "Not found."}

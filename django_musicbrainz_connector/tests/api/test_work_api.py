@@ -26,7 +26,7 @@ def test_work_serializer():
 @pytest.mark.django_db
 def test_work_api_GET():
     api_client = APIClient()
-    response = api_client.get("/api/works/")
+    response = api_client.get("/works/")
     assert response.status_code == 200
     assert response.data["count"] == 1
     assert response.data["next"] is None
@@ -37,7 +37,7 @@ def test_work_api_GET():
 @pytest.mark.django_db
 def test_work_api_GET_by_id():
     api_client = APIClient()
-    response = api_client.get("/api/works/11432290/")
+    response = api_client.get("/works/11432290/")
     assert response.status_code == 200
     assert response.data == WORK_API_RESPONSE
 
@@ -45,7 +45,7 @@ def test_work_api_GET_by_id():
 @pytest.mark.django_db
 def test_work_api_GET_by_gid():
     api_client = APIClient()
-    response = api_client.get("/api/works/fe4f5295-4d0f-32bd-8029-743f740d31f1/")
+    response = api_client.get("/works/fe4f5295-4d0f-32bd-8029-743f740d31f1/")
     assert response.status_code == 200
     assert response.data == WORK_API_RESPONSE
 
@@ -53,6 +53,6 @@ def test_work_api_GET_by_gid():
 @pytest.mark.django_db
 def test_work_api_GET_instance_not_found():
     api_client = APIClient()
-    response = api_client.get("/api/works/1/")
+    response = api_client.get("/works/1/")
     assert response.status_code == 404
     assert response.data == {"detail": "Not found."}

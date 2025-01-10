@@ -16,7 +16,7 @@ def test_artist_credit_serializer():
 @pytest.mark.django_db
 def test_artist_credit_GET():
     api_client = APIClient()
-    response = api_client.get("/api/artist-credits/")
+    response = api_client.get("/artist-credits/")
     assert response.status_code == 200
     assert response.data["count"] == 3
     assert response.data["next"] is None
