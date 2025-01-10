@@ -25,7 +25,7 @@ class AreaType(models.Model):
     name = models.CharField(max_length=255, db_column="name")
     parent = models.ForeignKey("self", db_column="parent", null=True, on_delete=models.PROTECT)
     child_order = models.IntegerField("Child Order", db_column="child_order")
-    description = models.TextField(db_column="description")
+    description = models.TextField(db_column="description", null=True)
     gid = models.UUIDField("GID", db_column="gid")
 
     def __str__(self) -> str:
