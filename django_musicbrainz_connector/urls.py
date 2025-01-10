@@ -49,5 +49,5 @@ router.register(r"works", WorkViewSet)
 router.register(r"work-types", WorkTypeViewSet)
 
 urlpatterns = [
-    path("api/", include(router.urls)),
+    path("", include(router.urls)),
 ]
