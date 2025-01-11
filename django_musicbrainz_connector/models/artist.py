@@ -57,9 +57,9 @@ class Artist(models.Model):
     end_date_year = models.SmallIntegerField("End Date Year", null=True, db_column="end_date_year")
     end_date_month = models.SmallIntegerField("End Date Month", null=True, db_column="end_date_month")
     end_date_day = models.SmallIntegerField("End Date Day", null=True, db_column="end_date_day")
-    type = models.ForeignKey("ArtistType", db_column="type", on_delete=models.PROTECT)
-    area = models.ForeignKey("Area", db_column="area", on_delete=models.PROTECT)
-    gender = models.ForeignKey("Gender", db_column="gender", on_delete=models.PROTECT)
+    type = models.ForeignKey("ArtistType", null=True, db_column="type", on_delete=models.PROTECT)
+    area = models.ForeignKey("Area", null=True, db_column="area", on_delete=models.PROTECT)
+    gender = models.ForeignKey("Gender", null=True, db_column="gender", on_delete=models.PROTECT)
     comment = models.CharField(max_length=255, db_column="comment", default="")
     edits_pending = models.PositiveIntegerField("Edits Pending", db_column="edits_pending", default=0)
     last_updated = models.DateTimeField("Last Updated", db_column="last_updated")
@@ -67,6 +67,7 @@ class Artist(models.Model):
     begin_area = models.ForeignKey(
         "Area",
         verbose_name="Begin Area",
+        null=True,
         db_column="begin_area",
         on_delete=models.PROTECT,
         related_name="artists_begin_area",
@@ -74,6 +75,7 @@ class Artist(models.Model):
     end_area = models.ForeignKey(
         "Area",
         verbose_name="End Area",
+        null=True,
         db_column="end_area",
         on_delete=models.PROTECT,
         related_name="artists_end_area",
