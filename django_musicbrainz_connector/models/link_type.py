@@ -26,7 +26,7 @@ from django.db import models
 class LinkType(models.Model):
     id = models.IntegerField("ID", primary_key=True, db_column="id")
     parent = models.ForeignKey("self", db_column="parent", null=True, on_delete=models.PROTECT)
-    child_order = models.IntegerField("Child Order", db_column="child_order")
+    child_order = models.IntegerField("Child Order", db_column="child_order", default=0)
     gid = models.UUIDField("GID", db_column="gid")
     entity_type0 = models.CharField("Entity Type 0", max_length=50)
     entity_type1 = models.CharField("Entity Type 1", max_length=50)

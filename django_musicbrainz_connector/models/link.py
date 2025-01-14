@@ -40,15 +40,15 @@ class Link(models.Model):
         on_delete=models.PROTECT,
         db_column="link_type",
     )
-    begin_date_year = models.SmallIntegerField("Begin Date Year", null=True)
-    begin_date_month = models.SmallIntegerField("Begin Date Month", null=True)
-    begin_date_day = models.SmallIntegerField("Begin Date Day", null=True)
-    end_date_year = models.SmallIntegerField("End Date Year", null=True)
-    end_date_month = models.SmallIntegerField("End Date Month", null=True)
-    end_date_day = models.SmallIntegerField("End Date Day", null=True)
-    attribute_count = models.IntegerField("Attribute Count", default=0)
+    begin_date_year = models.SmallIntegerField("Begin Date Year", null=True, db_column="begin_date_year")
+    begin_date_month = models.SmallIntegerField("Begin Date Month", null=True, db_column="begin_date_month")
+    begin_date_day = models.SmallIntegerField("Begin Date Day", null=True, db_column="begin_date_day")
+    end_date_year = models.SmallIntegerField("End Date Year", null=True, db_column="end_date_year")
+    end_date_month = models.SmallIntegerField("End Date Month", null=True, db_column="end_date_month")
+    end_date_day = models.SmallIntegerField("End Date Day", null=True, db_column="end_date_day")
+    attribute_count = models.IntegerField("Attribute Count", db_column="attribute_count", default=0)
     created = models.DateTimeField("Created", db_column="created")
-    ended = models.BooleanField("Ended?", default=False)
+    ended = models.BooleanField("Ended?", db_column="ended", default=False)
 
     class Meta:
         managed = False
