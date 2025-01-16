@@ -11,7 +11,6 @@ CREATE TABLE link_type ( -- replicate
     link_phrase         VARCHAR(255) NOT NULL,
     reverse_link_phrase VARCHAR(255) NOT NULL,
     long_link_phrase    VARCHAR(255) NOT NULL,
-    priority            INTEGER NOT NULL DEFAULT 0,
     last_updated        TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     is_deprecated       BOOLEAN NOT NULL DEFAULT false,
     has_dates           BOOLEAN NOT NULL DEFAULT true,
@@ -35,7 +34,6 @@ class LinkType(models.Model):
     link_phrase = models.CharField("Link Phrase", max_length=255, db_column="link_phrase")
     reverse_link_phrase = models.CharField("Reverse Link Phrase", max_length=255, db_column="reverse_link_phrase")
     long_link_phrase = models.CharField("Long Link Phrase", max_length=255, db_column="long_link_phrase")
-    priority = models.IntegerField(default=0)
     last_updated = models.DateTimeField("Last Updated", db_column="last_updated", auto_now=True)
     is_deprecated = models.BooleanField("Is Deprecated?", default=False)
     has_dates = models.BooleanField("Has Dates?", default=True)
