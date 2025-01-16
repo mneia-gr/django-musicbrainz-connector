@@ -1,6 +1,17 @@
 Changelog
 =========
 
+v0.0.6 (released 2025-01-16)
+----------------------------
+
+This is a bug fix release. Changes:
+
+*   Added missing `db_columb` attribute to the Link model.
+*   Added missing `default` value to the Link Type model.
+*   Removed the `priority` field from the Link Type model, per the same upstream change.
+*   Dropped support for Django and require Django 5.1.
+*   Updated versions of required dependencies.
+
 v0.0.5 (released 2025-01-11)
 ----------------------------
 
