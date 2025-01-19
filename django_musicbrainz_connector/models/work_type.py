@@ -20,6 +20,7 @@ class WorkType(models.Model):
         );
 
     """
+
     id = models.IntegerField("ID", primary_key=True, db_column="id")
     name = models.CharField(max_length=255, db_column="name")
     parent = models.ForeignKey("self", db_column="parent", null=True, on_delete=models.PROTECT)
