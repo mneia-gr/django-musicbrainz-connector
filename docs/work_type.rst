@@ -1,17 +1,7 @@
 Work Type
 =========
 
-.. automodule:: django_musicbrainz_connector.models.work_type
-   :noindex:
+.. autoclass:: django_musicbrainz_connector.models::WorkType
 
-Model Documentation
--------------------
-
-.. autoclass:: django_musicbrainz_connector.models.work_type::WorkType
-
-Model Source
-------------
-
-.. literalinclude:: ../django_musicbrainz_connector/models/work_type.py
-   :pyobject: WorkType
-..    :caption: The `WorkType` Model
+.. include:: includes/work-types.md
+   :parser: myst_parser.sphinx_

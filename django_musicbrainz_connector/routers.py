@@ -10,8 +10,9 @@ class DjangoMusicBrainzConnectorDatabaseRouter:
 
     def db_for_write(self, model, **hints):
         """
-        Return the database that will be used for write operations. We protect the database from write operation
-        elsewhere in the code, but not here. Returning anything except the actual database name here breaks the Admin.
+        Return the database that will be used for write operations. We protect the database from write operations
+        elsewhere in the code, but not here. Returning anything except the actual database name here breaks the Admin
+        interface.
         """
         return "musicbrainz_db" if model._meta.app_label == self.APP_LABEL else None
 
