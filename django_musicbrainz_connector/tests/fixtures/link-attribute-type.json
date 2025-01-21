@@ -1,0 +1,15 @@
+[
+    {
+        "model": "django_musicbrainz_connector.linkattributetype",
+        "pk": 567,
+        "fields": {
+            "parent": null,
+            "root": 567,
+            "child_order": 0,
+            "gid": "1e8536bd-6eda-3822-8e78-1c0f4d3d2113",
+            "name": "cover",
+            "description": "Indicates that one entity is a cover of another entity.",
+            "last_updated": "2023-12-13 15:40:18.933201+00"
+        }
+    }
+]

@@ -43,6 +43,7 @@ def django_db_setup(django_db_setup, django_db_blocker):
         "artist-type",
         "gender",
         "artist",
+        "link-attribute-type",
     ]
     with django_db_blocker.unblock():
         for fixture in fixtures:

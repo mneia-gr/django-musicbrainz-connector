@@ -9,6 +9,7 @@ from django_musicbrainz_connector.api.artist_type import ArtistTypeViewSet
 from django_musicbrainz_connector.api.gender import GenderViewSet
 from django_musicbrainz_connector.api.language import LanguageViewSet
 from django_musicbrainz_connector.api.link import LinkViewSet
+from django_musicbrainz_connector.api.link_attribute_type import LinkAttributeTypeViewSet
 from django_musicbrainz_connector.api.link_type import LinkTypeViewSet
 from django_musicbrainz_connector.api.medium import MediumViewSet
 from django_musicbrainz_connector.api.medium_format import MediumFormatViewSet
@@ -33,6 +34,7 @@ router.register(r"artists", ArtistViewSet)
 router.register(r"genders", GenderViewSet)
 router.register(r"languages", LanguageViewSet)
 router.register(r"links", LinkViewSet)
+router.register(r"link-attribute-types", LinkAttributeTypeViewSet)
 router.register(r"link-types", LinkTypeViewSet)
 router.register(r"media", MediumViewSet)
 router.register(r"medium-formats", MediumFormatViewSet)
