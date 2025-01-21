@@ -8,5 +8,15 @@
             "type": 17,
             "last_updated": "2023-11-10T20:02:54.412Z"
         }
+    },
+    {
+        "model": "django_musicbrainz_connector.work",
+        "pk": 12431814,
+        "fields": {
+            "name": "Φραγκοσυριανή",
+            "gid": "864c45d9-8450-4b6f-9570-744980fba21e",
+            "type": 17,
+            "last_updated": "2020-04-30 16:00:28.854191+00"
+        }
     }
 ]

@@ -1,37 +1,44 @@
-"""
-CREATE TABLE link ( -- replicate
-    id                  SERIAL,
-    link_type           INTEGER NOT NULL, -- references link_type.id
-    begin_date_year     SMALLINT,
-    begin_date_month    SMALLINT,
-    begin_date_day      SMALLINT,
-    end_date_year       SMALLINT,
-    end_date_month      SMALLINT,
-    end_date_day        SMALLINT,
-    attribute_count     INTEGER NOT NULL DEFAULT 0,
-    created             TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    ended               BOOLEAN NOT NULL DEFAULT FALSE
-      CONSTRAINT link_ended_check CHECK (
-        (
-          -- If any end date fields are not null, then ended must be true
-          (end_date_year IS NOT NULL OR
-           end_date_month IS NOT NULL OR
-           end_date_day IS NOT NULL) AND
-          ended = TRUE
-        ) OR (
-          -- Otherwise, all end date fields must be null
-          (end_date_year IS NULL AND
-           end_date_month IS NULL AND
-           end_date_day IS NULL)
-        )
-      )
-);
-"""
-
 from django.db import models
 
 
 class Link(models.Model):
+    """
+    PostgreSQL Definition
+    ---------------------
+
+    The :code:`link` table is defined in the MusicBrainz Server as:
+
+    .. code-block:: sql
+
+        CREATE TABLE link ( -- replicate
+            id                  SERIAL,
+            link_type           INTEGER NOT NULL, -- references link_type.id
+            begin_date_year     SMALLINT,
+            begin_date_month    SMALLINT,
+            begin_date_day      SMALLINT,
+            end_date_year       SMALLINT,
+            end_date_month      SMALLINT,
+            end_date_day        SMALLINT,
+            attribute_count     INTEGER NOT NULL DEFAULT 0,
+            created             TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+            ended               BOOLEAN NOT NULL DEFAULT FALSE
+            CONSTRAINT link_ended_check CHECK (
+                (
+                -- If any end date fields are not null, then ended must be true
+                (end_date_year IS NOT NULL OR
+                end_date_month IS NOT NULL OR
+                end_date_day IS NOT NULL) AND
+                ended = TRUE
+                ) OR (
+                -- Otherwise, all end date fields must be null
+                (end_date_year IS NULL AND
+                end_date_month IS NULL AND
+                end_date_day IS NULL)
+                )
+            )
+        );
+    """
+
     id = models.IntegerField("ID", primary_key=True, db_column="id")
     link_type = models.ForeignKey(
         "LinkType",

@@ -8,5 +8,15 @@
             "work": 11432290,
             "last_updated": "2023-11-10T20:02:54.412Z"
         }
+    },
+    {
+        "model": "django_musicbrainz_connector.recordingworklink",
+        "pk": 356489,
+        "fields": {
+            "link": 27125,
+            "recording": 10911771,
+            "work": 12431814,
+            "last_updated": "2020-04-30 16:00:28.854191+00"
+        }
     }
 ]

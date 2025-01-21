@@ -30,7 +30,24 @@ RECORDING_13679972_API_RESPONSE = {
     "artist_credit": 1002781,
 }
 
-RECORDING_LIST_API_RESPONSE = [RECORDING_13679939_API_RESPONSE, RECORDING_13679972_API_RESPONSE]
+RECORDING_10911771_API_RESPONSE = {
+    "id": 10911771,
+    "recording_of": ["864c45d9-8450-4b6f-9570-744980fba21e"],
+    "gid": "0e065830-aa1d-42d7-94f5-9513b5bed21d",
+    "name": "Φραγκοσυριανή",
+    "length": 185000,
+    "artist_credit": 290582,
+    "comment": "",
+    "edits_pending": 0,
+    "last_updated": "2022-12-02T04:40:23.765950-06:00",
+    "video": False,
+}
+
+RECORDING_LIST_API_RESPONSE = [
+    RECORDING_13679939_API_RESPONSE,
+    RECORDING_13679972_API_RESPONSE,
+    RECORDING_10911771_API_RESPONSE,
+]
 
 
 @pytest.mark.django_db
@@ -46,7 +63,7 @@ def test_recording_api_GET():
     api_client = APIClient()
     response = api_client.get("/recordings/")
     assert response.status_code == 200
-    assert response.data["count"] == 2
+    assert response.data["count"] == 3
     assert response.data["next"] is None
     assert response.data["previous"] is None
     assert response.data["results"] == RECORDING_LIST_API_RESPONSE

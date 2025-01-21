@@ -14,5 +14,21 @@
             "end_date_year": 1947,
             "ended": true
         }
+    },
+    {
+        "model": "django_musicbrainz_connector.link",
+        "pk": 27125,
+        "fields": {
+            "link_type": 278,
+            "created": "2011-05-16 15:03:23.368437+00",
+            "attribute_count": 1,
+            "begin_date_day": null,
+            "begin_date_month": null,
+            "begin_date_year": null,
+            "end_date_day": null,
+            "end_date_month": null,
+            "end_date_year": null,
+            "ended": false
+        }
     }
 ]

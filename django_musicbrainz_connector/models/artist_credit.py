@@ -39,3 +39,4 @@ class ArtistCredit(models.Model):
         managed = False
         db_table = "artist_credit"
         verbose_name_plural = "Artist Credits"
+        ordering = ["name"]

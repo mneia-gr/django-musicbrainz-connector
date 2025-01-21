@@ -1,0 +1,11 @@
+[
+    {
+        "model": "django_musicbrainz_connector.linkattribute",
+        "pk": 27125,
+        "fields": {
+            "link": 27125,
+            "attribute_type": 567,
+            "created": "2011-05-16 15:03:23.368437+00"
+        }
+    }
+]

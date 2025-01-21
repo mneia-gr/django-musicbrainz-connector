@@ -54,3 +54,4 @@ class Recording(models.Model):
         managed = False
         db_table = "recording"
         verbose_name_plural = "Recordings"
+        ordering = ["name"]

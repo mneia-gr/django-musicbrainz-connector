@@ -32,5 +32,17 @@
             "edits_pending": 0,
             "gid": "1227e205-bf71-3bb0-ad47-8ed6c6e3be0f"
         }
+    },
+    {
+        "model": "django_musicbrainz_connector.artistcredit",
+        "pk": 290582,
+        "fields": {
+            "name": "Γρηγόρης Μπιθικώτσης",
+            "artist_count": 1,
+            "ref_count": 1179,
+            "created": "2011-05-16 16:32:11.963929+00",
+            "edits_pending": 0,
+            "gid": "125d928a-67e3-33e1-9884-cb1fee89cf08"
+        }
     }
 ]

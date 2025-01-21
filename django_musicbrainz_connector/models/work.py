@@ -54,3 +54,4 @@ class Work(models.Model):
         managed = False
         db_table = "work"
         verbose_name_plural = "Works"
+        ordering = ["name"]

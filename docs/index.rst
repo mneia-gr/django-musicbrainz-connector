@@ -24,6 +24,7 @@ Models
    gender
    language
    link
+   link_attribute
    link_attribute_type
    link_type
    medium_format
