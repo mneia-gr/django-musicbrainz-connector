@@ -29,11 +29,13 @@ class LinkAttributeType(models.Model):
         null=True,
         on_delete=models.PROTECT,
         related_name="child_link_attribute_types",
+        db_column="parent",
     )
     root = models.ForeignKey(
         "self",
         on_delete=models.PROTECT,
         related_name="leaf_child_attribute_types",
+        db_column="root",
     )
     child_order = models.IntegerField("Child Order", default=0, db_column="child_order")
     gid = models.UUIDField("GID", db_column="gid")

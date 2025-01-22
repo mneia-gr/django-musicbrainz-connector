@@ -21,9 +21,9 @@ class LinkAttribute(models.Model):
     :param attribute_type: References :class:`LinkAttributeType`.
     """
 
-    link = models.OneToOneField("Link", primary_key=True, on_delete=models.PROTECT)
-    attribute_type = models.OneToOneField("LinkAttributeType", on_delete=models.PROTECT)
-    created = models.DateTimeField(auto_now_add=True)
+    link = models.OneToOneField("Link", primary_key=True, on_delete=models.PROTECT, db_column="link")
+    attribute_type = models.OneToOneField("LinkAttributeType", on_delete=models.PROTECT, db_column="attribute_type")
+    created = models.DateTimeField(auto_now_add=True, db_column="created")
 
     class Meta:
         managed = False

@@ -17,9 +17,9 @@ class LinkAttributeTextValue(models.Model):
         );
     """
 
-    link = models.OneToOneField("Link", primary_key=True, on_delete=models.PROTECT)
-    attribute_type = models.OneToOneField("LinkAttributeType", on_delete=models.PROTECT)
-    text_value = models.TextField()
+    link = models.OneToOneField("Link", primary_key=True, on_delete=models.PROTECT, db_column="link")
+    attribute_type = models.OneToOneField("LinkAttributeType", on_delete=models.PROTECT, db_column="attribute_type")
+    text_value = models.TextField(db_column="text_value")
 
     class Meta:
         managed = False

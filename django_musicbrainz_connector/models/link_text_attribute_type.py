@@ -15,7 +15,9 @@ class LinkTextAttributeType(models.Model):
         );
     """
 
-    attribute_type = models.OneToOneField("LinkAttributeType", primary_key=True, on_delete=models.PROTECT)
+    attribute_type = models.OneToOneField(
+        "LinkAttributeType", primary_key=True, on_delete=models.PROTECT, db_column="attribute_type"
+    )
 
     class Meta:
         managed = False
