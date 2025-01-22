@@ -7,6 +7,7 @@ from django_musicbrainz_connector.models.gender import Gender
 from django_musicbrainz_connector.models.language import Language
 from django_musicbrainz_connector.models.link import Link
 from django_musicbrainz_connector.models.link_attribute import LinkAttribute
+from django_musicbrainz_connector.models.link_attribute_text_value import LinkAttributeTextValue
 from django_musicbrainz_connector.models.link_attribute_type import LinkAttributeType
 from django_musicbrainz_connector.models.link_text_attribute_type import LinkTextAttributeType
 from django_musicbrainz_connector.models.link_type import LinkType
@@ -34,6 +35,7 @@ __all__ = [
     "Language",
     "Link",
     "LinkAttribute",
+    "LinkAttributeTextValue",
     "LinkAttributeType",
     "LinkTextAttributeType",
     "LinkType",

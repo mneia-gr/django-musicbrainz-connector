@@ -25,6 +25,7 @@ Models
    language
    link
    link_attribute
+   link_attribute_text_value
    link_attribute_type
    link_text_attribute_type
    link_type
