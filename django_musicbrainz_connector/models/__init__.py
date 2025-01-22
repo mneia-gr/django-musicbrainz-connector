@@ -8,6 +8,7 @@ from django_musicbrainz_connector.models.language import Language
 from django_musicbrainz_connector.models.link import Link
 from django_musicbrainz_connector.models.link_attribute import LinkAttribute
 from django_musicbrainz_connector.models.link_attribute_type import LinkAttributeType
+from django_musicbrainz_connector.models.link_text_attribute_type import LinkTextAttributeType
 from django_musicbrainz_connector.models.link_type import LinkType
 from django_musicbrainz_connector.models.medium import Medium
 from django_musicbrainz_connector.models.medium_format import MediumFormat
@@ -34,6 +35,7 @@ __all__ = [
     "Link",
     "LinkAttribute",
     "LinkAttributeType",
+    "LinkTextAttributeType",
     "LinkType",
     "Medium",
     "MediumFormat",
