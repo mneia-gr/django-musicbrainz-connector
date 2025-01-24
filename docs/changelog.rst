@@ -1,6 +1,14 @@
 Changelog
 =========
 
+v0.0.7 (released 2025-01-24)
+----------------------------
+
+*   Added models `LinkAttribute`, `LinkAttributeTextValue`, `LinkAttributeType`, and `LinkTextAttributeType`.
+*   Added some missing `db_column` field attributes on model `LinkType`, and added a test so that these aren't missed.
+*   Added completed or partial data dumps from the MusicBrainz database into the Sphinx documentation of models
+    `AreaType`, `ArtistType`, `Gender`, `LinkAttributeType`, and `WorkType`.
+
 v0.0.6 (released 2025-01-16)
 ----------------------------
 
