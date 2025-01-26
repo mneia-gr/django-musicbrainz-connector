@@ -1,7 +1,7 @@
 Area Types
 ==========
 
-Last checked on 2025-01-22, there are 9 area types in the MusicBrainz database:
+Last checked on 2025-01-26, there are 9 area types in the MusicBrainz database:
 
 | id              | name              |  description             |
 |-----------------|-------------------|--------------------------|

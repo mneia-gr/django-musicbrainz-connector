@@ -1,7 +1,7 @@
 Work Types
 ==========
 
-Last checked on 2025-01-22, there are 29 work types in the MusicBrainz database:
+Last checked on 2025-01-26, there are 29 work types in the MusicBrainz database:
 
 | id              | name              |  description             |
 |-----------------|-------------------|--------------------------|
