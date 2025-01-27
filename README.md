@@ -7,6 +7,10 @@
 [![Supported Django versions](https://img.shields.io/pypi/djversions/django-musicbrainz-connector.svg)](https://pypi.python.org/pypi/django-musicbrainz-connector)
 
 The **Django MusicBrainz Connector** is a Django app that connects to a replica of the MusicBrainz PostgreSQL database.
+For more information, see the [documentation](https://django-musicbrainz-connector.readthedocs.io/).
+
+This app is not feature-complete compared to the MusicBrainz schema. For a feature-complete Python alternative based
+on SQLAlchemy, take a look at [mbdata](https://github.com/acoustid/mbdata/tree/main).
 
 ## Installation
 

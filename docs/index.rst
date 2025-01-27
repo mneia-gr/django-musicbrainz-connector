@@ -6,6 +6,10 @@ For more information, see the `GitHub Repository`_.
 
 .. _GitHub Repository: https://github.com/mneia-gr/django-musicbrainz-connector
 
+For a feature-complete Python alternative, based on SQLAlchemy, take a look at `mbdata`_.
+
+.. _mbdata: https://github.com/acoustid/mbdata/tree/main
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
