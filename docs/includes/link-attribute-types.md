@@ -1,7 +1,7 @@
 Link Attribute Types
 ====================
 
-Last checked on 2025-01-27, there are 1157 link attribute types in the MusicBrainz database. Here is a
+Last checked on 2025-01-29, there are 1157 link attribute types in the MusicBrainz database. Here is a
 sample of 20 of them:
 
 | id              | parent              | root              | name              |  description             |

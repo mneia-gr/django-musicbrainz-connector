@@ -201,3 +201,5 @@ sphinx-build -M html docs build/docs
     ```
 
 6.  Create a new Release on GitHub, from the tag pushed earlier.
+
+7.  Publish a blog post on [docs.mneia.gr](https://docs.mneia.gr/) for the new release.

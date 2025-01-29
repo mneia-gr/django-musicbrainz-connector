@@ -1,7 +1,7 @@
 Genders
 ========
 
-Last checked on 2025-01-27, there are 5 genders in the MusicBrainz database:
+Last checked on 2025-01-29, there are 5 genders in the MusicBrainz database:
 
 | id              | name              |  description             |
 |-----------------|-------------------|--------------------------|
