@@ -177,7 +177,7 @@ sphinx-build -M html docs build/docs
 2.  Create a git tag same as the `version`, and push it, for example:
 
     ```
-    git tag --annotate v0.0.2 --message "Release tag v0.0.2"
+    git tag --annotate v0.0.2 --message "Release v0.0.2"
     git push origin v0.0.2
     ```
 
