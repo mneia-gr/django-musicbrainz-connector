@@ -1,6 +1,12 @@
 Changelog
 =========
 
+v0.0.8 (released 2025-04-25)
+----------------------------
+
+*   Added ability in the API to GET an Artist using either the Artist's `id` (an integer), or `gid` (a UUID), or the
+    Artist's name (as long as the name is unique).
+
 v0.0.7 (released 2025-01-24)
 ----------------------------
 
