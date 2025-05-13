@@ -24,6 +24,7 @@ dependencies = [
 #
 # You only need test dependencies if you are running unit tests:
 test = [
+    "django",
     "flake8",
     "black",
     "isort",
