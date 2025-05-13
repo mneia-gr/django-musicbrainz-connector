@@ -28,7 +28,7 @@ on SQLAlchemy, take a look at [mbdata](https://github.com/acoustid/mbdata/tree/m
     ```
     git clone git@github.com:mneia-gr/django-musicbrainz-connector.git
     cd django-musicbrainz-connector
-    python setup.py sdist
+    python -m build
     python -m pip install dist/django-musicbrainz-connector-0.0.1.tar.gz
     ```
 
@@ -172,7 +172,7 @@ sphinx-build -M html docs build/docs
 
 ### Release ###
 
-1.  Bump the value of `version` in `setup.cfg`, and push to GitHub.
+1.  Bump the value of `version` in `pyproject.toml`, and push to GitHub.
 
 2.  Create a git tag same as the `version`, and push it, for example:
 
@@ -184,8 +184,7 @@ sphinx-build -M html docs build/docs
 3.  Build:
 
     ```
-    python setup.py sdist
-    python setup.py bdist_wheel
+    python -m build
     ```
 
 4.  Upload to TestPyPI:
