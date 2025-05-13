@@ -149,10 +149,10 @@ ways:
 
 ### Testing ###
 
-Install test dependencies with:
+You need pip version 25.1 or newer for this to work. Install test dependencies with:
 
 ```
-python -m pip install --requirement requirements-test.txt
+python -m pip install --group test
 ```
 
 Then, run tests with:
@@ -163,10 +163,10 @@ Then, run tests with:
 
 ### Documentation ###
 
-To build the documentation locally:
+You need pip version 25.1 or newer for this to work. To build the documentation locally:
 
 ```
-python -m pip install --requirement docs/requirements.txt
+python -m pip install --group docs
 sphinx-build -M html docs build/docs
 ```
 

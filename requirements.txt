@@ -1,4 +1,0 @@
-django
-setuptools
-djangorestframework
-psycopg

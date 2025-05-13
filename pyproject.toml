@@ -1,6 +1,44 @@
 [build-system]
-requires = ['setuptools>=75.0']
+requires = ["setuptools>=75.0", "build"]
 build-backend = 'setuptools.build_meta'
+
+[project]
+name = "django-musicbrainz-connector"
+version = "0.0.8"
+dependencies = [
+    "django",
+    "djangorestframework",
+    "psycopg",
+]
+
+[dependency-groups]
+# `pip` supports `dependency-groups` from version 25.1. Usage:
+#
+#   pip install --group docs
+#   pip install --group test
+#
+# References:
+#
+#   https://github.com/pypa/pip/issues/12963
+#   https://github.com/pypa/pip/pull/13065
+#
+# You only need test dependencies if you are running unit tests:
+test = [
+    "flake8",
+    "black",
+    "isort",
+    "bandit",
+    "coverage",
+    "pytest",
+    "pytest-django",
+]
+docs = [
+    "sphinx",
+    "sphinx-rtd-theme",
+    "django",
+    "djangorestframework",
+    "myst-parser",
+]
 
 [tool.black]
 line-length = 120
