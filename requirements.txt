@@ -1,0 +1,4 @@
+django
+setuptools
+djangorestframework
+psycopg

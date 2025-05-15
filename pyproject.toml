@@ -1,81 +1,6 @@
 [build-system]
-requires = ["setuptools>=75.0", "build"]
+requires = ['setuptools>=75.0']
 build-backend = 'setuptools.build_meta'
-
-[project]
-name = "django-musicbrainz-connector"
-version = "0.0.8"
-dependencies = [
-    "django",
-    "djangorestframework",
-    "psycopg",
-]
-description = "A Django app that connects to a replica of the MusicBrainz database."
-readme = "README.md"
-authors = [
-    { name ="Marios Zindilis", email="marios@mneia.gr" },
-]
-license = "BSD-3-Clauses"
-license-files = ["LICENSE"]
-keywords = ["django", "musicbrainz"]
-classifiers = [
-    "Environment :: Web Environment",
-    "Framework :: Django",
-    "Framework :: Django :: 5.1",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: BSD License",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Topic :: Internet :: WWW/HTTP",
-    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
-]
-
-[project.urls]
-homepage = "https://github.com/mneia-gr/django-musicbrainz-connector"
-repository = "https://github.com/mneia-gr/django-musicbrainz-connector"
-issues = "https://github.com/mneia-gr/django-musicbrainz-connector/issues"
-changelog = "https://django-musicbrainz-connector.readthedocs.io/en/latest/changelog.html"
-
-
-[dependency-groups]
-# `pip` supports `dependency-groups` from version 25.1. Usage:
-#
-#   pip install --group docs
-#   pip install --group test
-#
-# References:
-#
-#   https://github.com/pypa/pip/issues/12963
-#   https://github.com/pypa/pip/pull/13065
-#
-# You only need test dependencies if you are running unit tests:
-test = [
-    "django",
-    "flake8",
-    "flake8-pyproject",
-    "black",
-    "isort",
-    "bandit",
-    "coverage",
-    "pytest",
-    "pytest-django",
-]
-docs = [
-    "sphinx",
-    "sphinx-rtd-theme",
-    "django",
-    "djangorestframework",
-    "myst-parser",
-]
-
-[tool.flake8]
-max-line-length = 120
 
 [tool.black]
 line-length = 120
@@ -87,15 +12,3 @@ line_length = 120  # https://pycqa.github.io/isort/docs/configuration/options.ht
 
 [tool.bandit]
 assert_used = { skips = [ "*/test_*.py" ] } # Allow `assert` to be used in tests
-
-[tool.coverage.run]
-source = ["."]
-omit = [
-    "manage.py",
-    "conftest.py",
-    "django_musicbrainz_connector/migrations/*.py",
-    "django_musicbrainz_connector/tests/*",
-]
-
-[tool.coverage.report]
-show_missing = true
