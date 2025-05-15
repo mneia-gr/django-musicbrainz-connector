@@ -2,7 +2,7 @@
 
 [![Django CI](https://github.com/mneia-gr/django-musicbrainz-connector/actions/workflows/django.yml/badge.svg)](https://github.com/mneia-gr/django-musicbrainz-connector/actions/workflows/django.yml)
 [![Docs](https://readthedocs.org/projects/django-musicbrainz-connector/badge/?version=latest)](https://django-musicbrainz-connector.readthedocs.org/en/latest/?badge=latest)
-[![codecov](https://codecov.io/gh/mneia-gr/django-musicbrainz-connector/graph/badge.svg?token=GUPRL0NELL)](https://codecov.io/gh/mneia-gr/django-musicbrainz-connector)
+[![Coverage Status](https://coveralls.io/repos/github/mneia-gr/django-musicbrainz-connector/badge.svg)](https://coveralls.io/github/mneia-gr/django-musicbrainz-connector)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-musicbrainz-connector)](https://pypi.python.org/pypi/django-musicbrainz-connector)
 [![Supported Django versions](https://img.shields.io/pypi/djversions/django-musicbrainz-connector.svg)](https://pypi.python.org/pypi/django-musicbrainz-connector)
 
