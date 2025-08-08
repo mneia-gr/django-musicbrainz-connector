@@ -1,6 +1,13 @@
 Changelog
 =========
 
+v0.0.9 (release 2025-08-08)
+---------------------------
+
+*   Added model `ArtistCreditName`.
+*   Dropped support for Python 3.9.
+*   Bumped minimum Django version to 5.2.
+
 v0.0.8 (released 2025-04-25)
 ----------------------------
 
