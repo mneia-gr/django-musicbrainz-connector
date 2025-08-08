@@ -9,7 +9,8 @@ from django_musicbrainz_connector.utils import get_musicbrainz_identifier_type
 class ArtistSerializer(serializers.ModelSerializer):
     class Meta:
         model = Artist
-        fields = "__all__"
+        # Dont serialize m2m fields
+        exclude = ["credits"]
 
 
 class ArtistViewSet(viewsets.ModelViewSet):

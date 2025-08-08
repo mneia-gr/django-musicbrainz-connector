@@ -23,6 +23,7 @@ Models
    area_type
    area
    artist_credit
+   artist_credit_name
    artist_type
    artist
    gender

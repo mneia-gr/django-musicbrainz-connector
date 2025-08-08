@@ -43,6 +43,7 @@ def django_db_setup(django_db_setup, django_db_blocker):
         "artist-type",
         "gender",
         "artist",
+        "artist-credit-name",
         "link-attribute-type",
         "link-attribute",
         "link-text-attribute-type",
