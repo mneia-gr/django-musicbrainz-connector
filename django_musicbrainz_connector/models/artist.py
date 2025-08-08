@@ -81,6 +81,8 @@ class Artist(models.Model):
         related_name="artists_end_area",
     )
 
+    credits = models.ManyToManyField("ArtistCredit", through="ArtistCreditName", related_name="artists")
+
     def __str__(self) -> str:
         return self.name
 

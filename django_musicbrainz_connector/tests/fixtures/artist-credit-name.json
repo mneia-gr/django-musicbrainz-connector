@@ -1,0 +1,16 @@
+[
+  {
+    "model": "django_musicbrainz_connector.artistcreditname",
+    "pk": [
+      1002781,
+      1
+    ],
+    "fields": {
+      "artist_credit": 1002781,
+      "position": 1,
+      "artist": 205528,
+      "name": "Μάρκος Βαμβακάρης",
+      "join_phrase": " & "
+    }
+  }
+]

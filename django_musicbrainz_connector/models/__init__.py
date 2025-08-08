@@ -2,6 +2,7 @@ from django_musicbrainz_connector.models.area import Area
 from django_musicbrainz_connector.models.area_type import AreaType
 from django_musicbrainz_connector.models.artist import Artist
 from django_musicbrainz_connector.models.artist_credit import ArtistCredit
+from django_musicbrainz_connector.models.artist_credit_name import ArtistCreditName
 from django_musicbrainz_connector.models.artist_type import ArtistType
 from django_musicbrainz_connector.models.gender import Gender
 from django_musicbrainz_connector.models.language import Language
@@ -29,6 +30,7 @@ __all__ = [
     "Area",
     "AreaType",
     "ArtistCredit",
+    "ArtistCreditName",
     "ArtistType",
     "Artist",
     "Gender",
