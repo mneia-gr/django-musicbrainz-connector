@@ -25,3 +25,13 @@ def get_musicbrainz_identifier_type(identifier: str | int) -> Literal["gid", "na
         return "name"  # it's not an integer
     else:
         return "id"  # it's an integer
+
+
+def clone_field(self, **kwargs):
+    """
+    Uses self.deconstruct() to clone a new copy of this Field.
+    Will not preserve any class attachments/attribute names.
+    """
+    name, path, args, fkwargs = self.deconstruct()
+    fkwargs.update(kwargs)
+    return self.__class__(*args, **fkwargs)

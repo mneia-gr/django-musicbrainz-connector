@@ -41,9 +41,11 @@ Models
    release_packaging
    release_status
    script
+   tag
    track
    work
    work_type
+   base_tag_model
 
 Changelog
 ---------

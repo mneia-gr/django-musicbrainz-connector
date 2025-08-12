@@ -1,0 +1,80 @@
+[
+  {
+    "model": "django_musicbrainz_connector.artisttag",
+    "pk": [
+      205528,
+      479
+    ],
+    "fields": {
+      "count": 1,
+      "last_updated": "2013-07-02T04:01:45.707Z",
+      "artist": 205528,
+      "tag": 479
+    }
+  },
+  {
+    "model": "django_musicbrainz_connector.areatag",
+    "pk": [
+      84,
+      1616
+    ],
+    "fields": {
+      "count": 1,
+      "last_updated": "2025-06-09T01:24:06.877Z",
+      "area": 84,
+      "tag": 1616 
+    }
+  },
+  {
+    "model": "django_musicbrainz_connector.recordingtag",
+    "pk": [
+      13679939,
+      1616
+    ],
+    "fields": {
+      "count": 1,
+      "last_updated": "2025-06-09T01:24:06.877Z",
+      "recording": 13679939,
+      "tag": 1616
+    }
+  },
+  {
+    "model": "django_musicbrainz_connector.releasetag",
+    "pk": [
+      2681644,
+      1616
+    ],
+    "fields": {
+      "count": 1,
+      "last_updated": "2025-06-09T01:24:06.877Z",
+      "release": 2681644,
+      "tag": 1616
+    }
+  },
+  {
+    "model": "django_musicbrainz_connector.releasegrouptag",
+    "pk": [
+      2369755,
+      1616
+    ],
+    "fields": {
+      "count": 1,
+      "last_updated": "2025-06-09T01:24:06.877Z",
+      "release_group": 2369755,
+      "tag": 1616
+    }
+  },
+  {
+    "model": "django_musicbrainz_connector.worktag",
+    "pk": [
+      11432290,
+      1616
+    ],
+    "fields": {
+      "count": 1,
+      "last_updated": "2025-06-09T01:24:06.877Z",
+      "work": 11432290,
+      "tag": 1616
+    }
+  }
+]
