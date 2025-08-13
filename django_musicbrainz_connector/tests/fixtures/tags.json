@@ -1,0 +1,18 @@
+[
+  {
+    "model": "django_musicbrainz_connector.tag",
+    "pk": 479,
+    "fields": {
+      "name": "greek",
+      "ref_count": 1098
+    }
+  },
+  {
+    "model": "django_musicbrainz_connector.tag",
+    "pk": 1616,
+    "fields": {
+      "name": "1988",
+      "ref_count": 118
+    }
+  }
+]

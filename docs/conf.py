@@ -16,7 +16,7 @@ os.environ["DJANGO_SETTINGS_MODULE"] = "django_musicbrainz_connector.tests.setti
 django.setup()
 
 project = "Django MusicBrainz Connector"
-copyright = "2023, Marios Zindilis"
+copyright = "2025, Marios Zindilis"
 author = "Marios Zindilis"
 
 # -- General configuration ---------------------------------------------------
