@@ -172,7 +172,7 @@ sphinx-build -M html docs build/docs
 
 ### Release ###
 
-1.  Bump the value of `version` in `setup.cfg`, and push to GitHub.
+1.  Bump the value of `version` in `setup.cfg`. Update `docs/changelog.md`. Push to GitHub.
 
 2.  Create a git tag same as the `version`, and push it, for example:
 

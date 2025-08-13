@@ -1,7 +1,12 @@
 Changelog
 =========
 
-v0.0.9 (release 2025-08-08)
+v0.0.10 (released 2025-08-13)
+-----------------------------
+
+*   Added models `AreaTag`, `ArtistTag`, `RecordingTag`, `ReleaseTag`, `ReleaseGroupTag`, and `WorkTag`.
+
+v0.0.9 (released 2025-08-08)
 ---------------------------
 
 *   Added model `ArtistCreditName`.
