@@ -2,7 +2,9 @@
 name = "django-musicbrainz-connector"
 version = "0.0.10"
 dependencies = [
-    "django>=5.2"
+    "django>=5.2",
+    "djangorestframework",
+    "psycopg",
 ]
 
 [build-system]
