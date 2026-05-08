@@ -1,40 +1,58 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # Script to run linters and tests on the django-musicbrainz-connector app.
 
-models=$(ls -1 django_musicbrainz_connector/models/*.py | grep -v __init__)
-
 # print "PASSED" in green colour:
 PASSED() {
-    printf '\033[0;32mPASSED\033[0m\n';
+    printf '\033[0;32mPASSED\033[0m\n'
 }
 
 # print "FAILED" in red colour and exit:
 FAILED() {
-    printf '\033[0;91mFAILED\033[0m\n';
-    exit 1;
+    printf '\033[0;91mFAILED\033[0m\n'
+    exit 1
+}
+
+print_padded() {
+    padding="......................................................................................................"
+    message=$1
+    max_length=92
+    # truncate the first argument to its first $max_length characters:
+    (( ${#message} > $max_length )) && message="${message:0:$max_length} […]"
+    # print the first argument right-padded with dots
+    printf "%s %s " "$message" "${padding:${#message}}"
 }
 
 # no need to print "PASSED" for `./manage.py check`, it already prints its own useful output
-./manage.py check                                                       || exit 1
+print_padded './manage.py check'
+./manage.py check                                                       || FAILED
 
-echo -n 'flake8 '
-flake8 .                                                    && PASSED   || exit 1
+print_padded 'flake8 '
+flake8 .                                                    && PASSED   || FAILED
 
-echo -n 'black '
-black --quiet --check --diff .                              && PASSED   || exit 1
+print_padded 'black '
+black --quiet --check --diff .                              && PASSED   || FAILED
 
-echo -n 'isort '
-isort --quiet --check-only --diff .                         && PASSED   || exit 1
+print_padded 'isort '
+isort --quiet --check-only --diff .                         && PASSED   || FAILED
 
-echo -n 'bandit '
-bandit --quiet --recursive . --configfile pyproject.toml    && PASSED   || exit 1
+print_padded 'bandit '
+bandit --quiet --recursive . --configfile pyproject.toml    && PASSED   || FAILED
 
+models=$(ls -1 django_musicbrainz_connector/models/*.py | grep -v __init__)
 for model in $models
 do
     model_name=$(echo $model | cut -d '/' -f 3 | cut -d '.' -f 1)
-    echo -n "Documentation exists for model $model_name? "
+    print_padded "Documentation exists for model $model_name? "
     grep --quiet "   $model_name" docs/index.rst                    && PASSED   || FAILED
+done
+
+# no need to print "PASSED" for `django-upgrade`, it already prints its own success message
+# See https://django-upgrade.readthedocs.io/en/latest/fixers.html for error codes
+for f in $(find . -type f -name "*.py")
+do
+    print_padded "django-upgrade --check $f"
+    django-upgrade --check $f                                           || FAILED
 done
 
 coverage run -m pytest -vv --no-migrations

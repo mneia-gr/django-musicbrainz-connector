@@ -7,5 +7,6 @@ bandit
 pytest
 pytest-django
 coverage
+django-upgrade
 
 -r requirements.txt
