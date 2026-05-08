@@ -152,7 +152,7 @@ ways:
 Install test dependencies with:
 
 ```
-python -m pip install --requirement requirements-test.txt
+python -m pip install --group test
 ```
 
 Then, run tests with:

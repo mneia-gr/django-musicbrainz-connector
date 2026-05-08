@@ -24,6 +24,19 @@ documentation = "https://django-musicbrainz-connector.readthedocs.io/"
 requires = ['setuptools>=75.0']
 build-backend = 'setuptools.build_meta'
 
+[dependency-groups]
+# Install test dependencies with `pip install --group test`. Requires pip version 25.1 or newer.
+test = [
+    "flake8",
+    "black",
+    "isort",
+    "bandit",
+    "django-upgrade",
+    "pytest",
+    "pytest-django",
+    "coverage",
+]
+
 [tool.black]
 line-length = 120
 
