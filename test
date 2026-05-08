@@ -49,7 +49,7 @@ done
 
 # no need to print "PASSED" for `django-upgrade`, it already prints its own success message
 # See https://django-upgrade.readthedocs.io/en/latest/fixers.html for error codes
-for f in $(find . -type f -name "*.py")
+for f in $(find . -type f -name "*.py" -not -path "./build/*")
 do
     print_padded "django-upgrade --check $f"
     django-upgrade --check $f                                           || FAILED

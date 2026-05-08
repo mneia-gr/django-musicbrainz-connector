@@ -54,3 +54,15 @@ assert_used = { skips = [ "*/test_*.py" ] } # Allow `assert` to be used in tests
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "django_musicbrainz_connector.tests.settings"
+
+[tool.coverage.run]
+source = ["."]
+omit = [
+    "manage.py",
+    "conftest.py",
+    "django_musicbrainz_connector/migrations/*.py",
+    "django_musicbrainz_connector/tests/*",
+]
+
+[tool.coverage.report]
+show_missing = true
