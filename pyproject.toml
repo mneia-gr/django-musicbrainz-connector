@@ -11,6 +11,14 @@ license = "BSD-3-Clause"
 license-files = ["LICENSE"]
 readme = "README.md"
 requires-python = ">=3.10"
+authors = [
+    { name = "Marios Zindilis", email = "marios@zindilis.com" },
+]
+
+[project.urls]
+homepage = "https://github.com/mneia-gr/django-musicbrainz-connector"
+repository = "https://github.com/mneia-gr/django-musicbrainz-connector"
+documentation = "https://django-musicbrainz-connector.readthedocs.io/"
 
 [build-system]
 requires = ['setuptools>=75.0']
