@@ -55,5 +55,4 @@ do
     django-upgrade --check $f                                           || FAILED
 done
 
-coverage run -m pytest -vv --no-migrations
-coverage report
+pytest

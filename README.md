@@ -148,16 +148,22 @@ ways:
 
 ### Testing ###
 
-Install test dependencies with:
+To install the test dependencies, run:
 
 ```
 python -m pip install --group test
 ```
 
-Then, run tests with:
+To run both linters and unit tests, run:
 
 ```
 ./test
+```
+
+Linters can be slow, so you can skip them and only run unit tests with:
+
+```
+pytest
 ```
 
 ### Documentation ###
