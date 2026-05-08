@@ -31,7 +31,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install .
           python -m pip install --group test
-          python -m pip install --requirement requirements.txt
+          python -m pip install --group build
       - name: Run Tests
         run: |
           bash test
