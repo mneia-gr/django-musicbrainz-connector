@@ -1,4 +1,3 @@
-include README.md
 recursive-include django_musicbrainz_connector/static *
 recursive-include django_musicbrainz_connector/templates *
 recursive-include docs *
