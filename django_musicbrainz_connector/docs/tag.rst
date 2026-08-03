@@ -14,7 +14,7 @@ Model Documentation
 
 .. autoclass:: django_musicbrainz_connector.models.tag::Tag
 
-.. autoclass:: django_musicbrainz_connector.models.base_tag_model::TagModel
+See also :class:`django_musicbrainz_connector.models.base_tag_model.TagModel`.
 
 Model Source
 ------------
@@ -22,14 +22,14 @@ Model Source
 Tag
 ***
 
-.. literalinclude:: ../django_musicbrainz_connector/models/tag.py
+.. literalinclude:: ../models/tag.py
    :pyobject: Tag
 ..    :caption: The `tag` Model
 
 TagModel
 ********
 
-.. literalinclude:: ../django_musicbrainz_connector/models/base_tag_model.py
+.. literalinclude:: ../models/base_tag_model.py
    :pyobject: TagModel
 ..    :caption: The `tagmodel` Model
 
@@ -37,5 +37,5 @@ TagModel
 Dynamic model creation for tagged table
 ***************************************
 
-.. literalinclude:: ../django_musicbrainz_connector/apps.py
+.. literalinclude:: ../apps.py
 ..    :caption: Dynamic model creation for tagged table

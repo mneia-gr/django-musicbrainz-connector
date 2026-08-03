@@ -12,6 +12,6 @@ Model Documentation
 Model Source
 ------------
 
-.. literalinclude:: ../django_musicbrainz_connector/models/artist_credit.py
+.. literalinclude:: ../models/artist_credit.py
    :pyobject: ArtistCredit
 ..    :caption: The `artist_credit` Model

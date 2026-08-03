@@ -171,13 +171,13 @@ pytest
 To build the documentation locally:
 
 ```
-python -m pip install --requirement docs/requirements.txt
-sphinx-build -M html docs build/docs
+python -m pip install --requirement django_musicbrainz_connector/docs/requirements.txt
+sphinx-build --fail-on-warning --fresh-env --builder html django_musicbrainz_connector/docs build/docs
 ```
 
 ### Release ###
 
-1.  Bump the value of `version` in `pyproject.toml`. Update `docs/changelog.md`. Push to GitHub.
+1.  Bump the value of `version` in `pyproject.toml`. Update `django_musicbrainz_connector/docs/changelog.md`. Push to GitHub.
 
 2.  Create a git tag same as the `version`, and push it, for example:
 

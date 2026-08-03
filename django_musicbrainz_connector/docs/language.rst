@@ -12,6 +12,6 @@ Model Documentation
 Model Source
 ------------
 
-.. literalinclude:: ../django_musicbrainz_connector/models/language.py
+.. literalinclude:: ../models/language.py
    :pyobject: Language
 ..    :caption: The `language` Model

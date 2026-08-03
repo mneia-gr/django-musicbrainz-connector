@@ -44,7 +44,7 @@ for model in $models
 do
     model_name=$(echo $model | cut -d '/' -f 3 | cut -d '.' -f 1)
     print_padded "Documentation exists for model $model_name? "
-    grep --quiet "   $model_name" docs/index.rst                    && PASSED   || FAILED
+    grep --quiet "   $model_name" django_musicbrainz_connector/docs/index.rst && PASSED || FAILED
 done
 
 # no need to print "PASSED" for `django-upgrade`, it already prints its own success message
